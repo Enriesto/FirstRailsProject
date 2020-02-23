@@ -1,0 +1,13 @@
+<% if @books.empty? %>
+  <p>No books available.</p>
+<% else %>
+  <% @books.each do |book| %>
+    <%# Rails will recognize 'book' as the path to book in routes.rb %>
+    <h2><%= link_to book.booktitle, book %></h2>
+    <%# We want to get the first name from the name array %>
+    <p>Author: <%= book.authors.first.name %></p>
+    <p>Average Rating: <%= book.avgrating %></p>
+    <p>Pages: <%= book.pages %></p>
+    <%= book.inspect %>
+  <% end %>
+<% end %>
