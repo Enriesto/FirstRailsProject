@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'authors/index'
+  get 'authors/show'
   # get 'books/index'
   # get 'books/show'
 
