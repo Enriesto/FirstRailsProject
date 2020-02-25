@@ -1,2 +1,7 @@
-<h1>Authors#index</h1>
-<p>Find me in app/views/authors/index.html.erb</p>
+<h2>All Authors</h2>
+
+<ul>
+  <% @authors.each do |author| %>
+    <li><%= author.name %></li>
+  <% end %>
+</ul>
