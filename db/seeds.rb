@@ -51,7 +51,7 @@ csv_file = Rails.root + 'db/books.csv'
 
 books = SmarterCSV.process(csv_file) # Pass the "options" hash as a second argument if CSV was created by Excel.
 
-books.first(20).each do |book|
+books.first(30).each do |book|
   # puts book[:title]
   book_name = book[:title]
   rating = book[:average_rating]

@@ -8,6 +8,5 @@
     <p>Author: <%= link_to book.authors.first.name, author_path(book.authors.first.id) %></p>
     <p>Average Rating: <%= book.avgrating %></p>
     <p>Pages: <%= book.pages %></p>
-    <%= book.inspect %>
   <% end %>
 <% end %>
