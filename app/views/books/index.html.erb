@@ -5,7 +5,7 @@
     <%# Rails will recognize 'book' as the path to book in routes.rb %>
     <h2><%= link_to book.booktitle, book %></h2>
     <%# We want to get the first name from the name array %>
-    <p>Author: <%= book.authors.first.name %></p>
+    <p>Author: <%= link_to book.authors.first.name, author_path(book.authors.first.id) %></p>
     <p>Average Rating: <%= book.avgrating %></p>
     <p>Pages: <%= book.pages %></p>
     <%= book.inspect %>

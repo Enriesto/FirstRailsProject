@@ -1,2 +1,9 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
+<h2><%= @author.name %></h2>
+<p>This author has written the following books:</p>
+<ul>
+  <% @author.books.each do |book| %>
+    <% if @author.name == book.authors.first.name %>
+      <li><%= book.booktitle %></li>
+    <% end %>
+  <% end %>
+</ul>

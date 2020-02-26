@@ -8,6 +8,10 @@ class AuthorsController < ApplicationController
   # Automatically loads view:
   # views/authors/index.html.erb
 
-  # GET /authors/:id
-  def show; end
+  # GET /authors/:id    => params[:id]
+  def show
+    @author = Author.find(params[:id])
+  end
+  # Automatically loads view:
+  # views/authors/show.html.erb
 end
