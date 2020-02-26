@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+# For pagination
+gem 'kaminari'
 # Smarter csv reader
 gem 'smarter_csv'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

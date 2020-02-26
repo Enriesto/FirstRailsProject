@@ -2,7 +2,7 @@
 
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.order(:booktitle).page params[:page]
   end
 
   # GET /books/:id (May need to change :id to something else)
