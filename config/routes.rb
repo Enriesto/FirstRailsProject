@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'about/index'
   # get 'authors/index'
   # get 'authors/show'
   # get 'books/index'
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   # GET /authors      => authors#index
   # GET /authors/:id  => authors#show
 
+  resources 'about', only: %i[index]
+
+  get 'search', to: 'books#search', as: 'search'
   # get 'authors', to: 'authors#index, as: ...'
   # get 'books/:id', to: 'books#show', id: /\d+/, as: 'book' # book_path
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
