@@ -1,0 +1,22 @@
+<% if @books.empty? %>
+  <p>No books available.</p>
+<% else %>
+      <div class="row">
+
+      <% @books.each do |book| %>
+        <div class="col-sm-4">
+      <div class="card" style="width: 18rem; display:inline-block">
+        <div class="card-body">
+        <h5 class="card-title"><%= link_to book.booktitle, book %></h5>
+        <p class="card-text"><p>Author: <%= link_to book.authors.first.name, author_path(book.authors.first.id) %></p>
+        <p>Average Rating: <%= book.avgrating %></p>
+        <p>Pages: <%= book.pages %></p></p>
+        <%# <%= link_to "Book Details", book %>
+        </div>
+        </div>
+      </div>
+  <% end %>
+  </div>
+<% end %>
+
+<%= paginate @books %>
