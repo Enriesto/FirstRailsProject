@@ -9,4 +9,9 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
   end
+
+  # Search action
+  def search
+    @books = Book.where('booktitle LIKE ?', "%#{params[:booktitle]}%").page params[:page]
+  end
 end
